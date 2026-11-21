@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MesaViva Restaurante | Carta Digital Contemporánea</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./Css/Style.css">
+
+  <script src="./Java/Script.js" defer></script>
+</head>
+<body>
+
+  <div class="academic-banner">
+    ITLA • Programación Web • Práctica 03: Diseño Responsivo Tablet
+  </div>
+
+  <header role="banner">
+    <h1 class="brand-title">MesaViva</h1>
+    <p class="brand-tagline">Restaurante &amp; Gastronomía Contemporánea</p>
+  </header>
+
+  <nav role="navigation" aria-label="Navegación principal">
+    <div class="nav-container">
+      <ul class="nav-list">
+        <li><a href="#concepto" class="nav-link">Concepto</a></li>
+        <li><a href="#carta" class="nav-link">Carta Digital</a></li>
+        <li><a href="#informacion" class="nav-link">Información</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <section id="concepto" class="hero-section" aria-label="Presentación de MesaViva">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-badge">Propuesta Gastronómica</span>
+        <h2>Ingredientes autóctonos con técnica de autor</h2>
+        <p>
+          En MesaViva rendimos homenaje a los productores locales seleccionando insumos de temporada para transformarlos mediante técnicas culinarias contemporáneas. Una propuesta sobria y elegante pensada para compartirse.
+        </p>
+      </div>
+
+      <div class="hero-image-frame">
+        <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80"
+             alt="Ambiente acogedor y mesa servida en el restaurante MesaViva"
+             class="hero-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenido principal -->
+  <div class="main-container">
+    <div class="layout-grid">
+
+      <main id="carta" role="main">
+
+        <div class="section-header">
+          <h2 class="section-title">Nuestra Carta Digital</h2>
+          <p class="section-subtitle">Consulte nuestras opciones gastronómicas por categoría</p>
+        </div>
+
+        <!-- Filtros -->
+        <section class="filter-panel" aria-label="Filtro de categorías de la carta">
+          <div class="filter-bar">
+
+            <div class="filter-buttons" id="filterContainer" role="group" aria-label="Seleccionar categoría">
+
+              <button class="filter-btn active" data-category="todas" aria-pressed="true">
+                Todas
+              </button>
+
+              <button class="filter-btn" data-category="entradas" aria-pressed="false">
+                Entradas
+              </button>
+
+              <button class="filter-btn" data-category="platos-fuertes" aria-pressed="false">
+                Platos Fuertes
+              </button>
+
+              <button class="filter-btn" data-category="postres" aria-pressed="false">
+                Postres
+              </button>
+
+              <button class="filter-btn" data-category="bebidas" aria-pressed="false">
+                Bebidas (Prueba)
+              </button>
+
+            </div>
+
+            <div class="counter-badge" id="counterBadge" aria-live="polite">
+              Mostrando: 6 platos
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Catálogo de platos -->
+        <section class="catalog-grid" id="catalogGrid" aria-live="polite">
+
+          <!-- Plato 1 -->
+          <article class="dish-card" data-category="entradas">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=600&q=80"
+                   alt="Bruschetta de tomate y albahaca fresca sobre pan rústico"
+                   class="dish-image">
+              <span class="dish-tag">Entrada</span>
+            </div>
+
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-title">Bruschetta de Tomate y Albahaca</h3>
+                <span class="dish-price">RD$ 480</span>
+              </div>
+
+              <p class="dish-description">
+                Pan rústico de masa madre tostado a la leña, tomates concassé marinados en aceite de oliva extra virgen, albahaca fresca y ajo asado.
+              </p>
+
+              <div class="dish-footer">
+                <span>Ingredientes locales</span>
+                <span>Opcion Vegetariana</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Plato 2 -->
+          <article class="dish-card" data-category="entradas">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=600&q=80"
+                   alt="Croquetas artesanales de queso servidas en plato cerámico"
+                   class="dish-image">
+              <span class="dish-tag">Entrada</span>
+            </div>
+
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-title">Croquetas Artesanales de Queso</h3>
+                <span class="dish-price">RD$ 550</span>
+              </div>
+
+              <p class="dish-description">
+                Suave bechamel con selección de quesos madurados dominicanos, empanadas en panko crocante y acompañadas de mermelada de pimientos dulces.
+              </p>
+
+              <div class="dish-footer">
+                <span>Quesos madurados</span>
+                <span>4 Unidades</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Plato 3 -->
+          <article class="dish-card" data-category="platos-fuertes">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80"
+                   alt="Filete de res sellado a la parrilla servido con vegetales asados"
+                   class="dish-image">
+              <span class="dish-tag">Plato Fuerte</span>
+            </div>
+
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-title">Filete de Res con Vegetales Asados</h3>
+                <span class="dish-price">RD$ 1,350</span>
+              </div>
+
+              <p class="dish-description">
+                Corte de novillo de 8 oz sellado a la parrilla con mantequilla de hierbas, acompañado de zanahorias baby, espárragos y papas al romero.
+              </p>
+
+              <div class="dish-footer">
+                <span>Corte Angus</span>
+                <span>Sin Glúten</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Plato 4 -->
+          <article class="dish-card" data-category="platos-fuertes">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=80"
+                   alt="Salmón a la plancha sobre puré cremoso de papas y mantequilla de limón"
+                   class="dish-image">
+              <span class="dish-tag">Plato Fuerte</span>
+            </div>
+
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-title">Salmón a la Plancha con Puré Cremoso</h3>
+                <span class="dish-price">RD$ 1,280</span>
+              </div>
+
+              <p class="dish-description">
+                Filete de salmón fresco con piel crocante sobre sedoso puré de yuca a la mantequilla, acompañado de reducción de cítricos y eneldo.
+              </p>
+
+              <div class="dish-footer">
+                <span>Pesca fresca</span>
+                <span>Rico en Omega 3</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Plato 5 -->
+          <article class="dish-card" data-category="postres">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80"
+                   alt="Cheesecake de frutos rojos decorado con coulis y hojas de menta"
+                   class="dish-image">
+              <span class="dish-tag">Postre</span>
+            </div>
+
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-title">Cheesecake de Frutos Rojos</h3>
+                <span class="dish-price">RD$ 420</span>
+              </div>
+
+              <p class="dish-description">
+                Cremosa receta tradicional sobre base horneada de galleta de jengibre, cubierta con compota artesanal de moras, frambuesas y arándanos.
+              </p>
+
+              <div class="dish-footer">
+                <span>Elaboración artesanal</span>
+                <span>Postre frío</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Plato 6 -->
+          <article class="dish-card" data-category="postres">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80"
+                   alt="Brownie de chocolate tibio acompañado de una bola de helado de vainilla"
+                   class="dish-image">
+              <span class="dish-tag">Postre</span>
+            </div>
+
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-title">Brownie de Chocolate con Helado</h3>
+                <span class="dish-price">RD$ 450</span>
+              </div>
+
+              <p class="dish-description">
+                Brownie denso de cacao dominicano al 70% servido tibio, acompañado de helado artesanal de vainilla Bourbon y nueces garrapiñadas.
+              </p>
+
+              <div class="dish-footer">
+                <span>Cacao orgánico</span>
+                <span>Servido tibio</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Estado vacío -->
+          <div class="empty-state" id="emptyState" role="alert">
+
+            <svg class="empty-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+
+            <h3>No hay opciones disponibles</h3>
+
+            <p>
+              Por el momento no contamos con platos registrados bajo esta categoría. Le invitamos a explorar nuestras demás opciones.
+            </p>
+
+            <button class="reset-btn" id="resetBtn">
+              Ver todas las opciones
+            </button>
+
+          </div>
+
+        </section>
+      </main>
+
+      <!-- Información del restaurante -->
+      <aside class="info-panel" id="informacion" aria-label="Información del restaurante MesaViva">
+
+        <h3 class="info-panel-title">Información General</h3>
+
+        <div class="info-section">
+          <h4 class="info-section-title">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Horario de Atención
+          </h4>
+
+          <ul class="schedule-list">
+            <li class="schedule-item">
+              <span>Lunes a Jueves:</span>
+              <strong>12:00 PM - 10:00 PM</strong>
+            </li>
+
+            <li class="schedule-item">
+              <span>Viernes y Sábados:</span>
+              <strong>12:00 PM - 11:30 PM</strong>
+            </li>
+
+            <li class="schedule-item">
+              <span>Domingos:</span>
+              <strong>12:00 PM - 9:00 PM</strong>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-section">
+          <h4 class="info-section-title">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+            Modalidad de Atención
+          </h4>
+
+          <p class="info-text">
+            Servicio exclusivo en salón bajo reserva previa, área de terraza al aire libre y recogida en mostrador (Takeout).
+          </p>
+        </div>
+
+        <div class="info-section">
+          <h4 class="info-section-title">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5l9 7 9-7" />
+            </svg>
+            Contacto &amp; Reservas
+          </h4>
+
+          <div class="contact-item">
+            <span><strong>Teléfono:</strong> (809) 555-0199</span>
+          </div>
+
+          <div class="contact-item">
+            <span><strong>Email:</strong> contacto@mesaviva.com.do</span>
+          </div>
+
+          <div class="contact-item">
+            <span><strong>Ubicación:</strong> Av. Gastronómica #104, Piantini, Santo Domingo (Ficticia)</span>
+          </div>
+        </div>
+
+        <div class="disclaimer-tag">
+          * Carta únicamente para consulta local. No procesa pagos ni pedidos online.
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-brand">MesaViva Restaurante</div>
+
+      <p class="footer-text">
+        Experiencia gastronómica contemporánea pensada para tabletas.
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>
